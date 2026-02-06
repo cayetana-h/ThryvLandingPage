@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
+import { Link } from "react-router-dom";
+
 
 const navLinks = [
   { href: "/benefits", label: "Benefits" },
@@ -36,13 +38,13 @@ export function Navbar() {
       <nav className="container-wide mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center group">
+          <Link to="/" className="flex items-center group">
             <img
               src="/logo.png"
               alt="Thryv"
               className="h-[65px] w-auto"
             />
-          </a>
+          </Link>
 
 
           {/* Desktop Navigation */}
