@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Heart, Lightbulb, Users } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const values = [
   {
@@ -21,6 +22,33 @@ const values = [
     title: "Built By Students",
     description:
       "Our team includes students and recent graduates who've experienced these struggles firsthand.",
+  },
+];
+
+const team = [
+  {
+    name: "Alex Chen",
+    role: "Co-Founder & CEO",
+    bio: "Neuroscience PhD dropout turned entrepreneur. Passionate about making cognitive science accessible.",
+    initials: "AC",
+  },
+  {
+    name: "Jordan Rivera",
+    role: "Co-Founder & CTO",
+    bio: "Former Google engineer. Believes technology should work with our brains, not against them.",
+    initials: "JR",
+  },
+  {
+    name: "Sam Mitchell",
+    role: "Head of Product",
+    bio: "UX designer and psychology enthusiast. Obsessed with creating delightful learning experiences.",
+    initials: "SM",
+  },
+  {
+    name: "Taylor Park",
+    role: "Lead Developer",
+    bio: "Full-stack developer and former competitive chess player. Loves building things that challenge the mind.",
+    initials: "TP",
   },
 ];
 
@@ -55,7 +83,7 @@ export function AboutSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            We started MindPulse after watching too many friends burn out from
+            We started Thryv after watching too many friends burn out from
             ineffective study habits. Endless hours in the library, only to feel
             like nothing stuck. Breaks that turned into hour-long doom-scrolling
             sessions. The frustration of knowing you're capable of more.
@@ -69,7 +97,7 @@ export function AboutSection() {
         </motion.div>
 
         {/* Values */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
           {values.map((value, index) => (
             <motion.div
               key={index}
@@ -86,6 +114,49 @@ export function AboutSection() {
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {value.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Team Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mb-12"
+        >
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+            Meet the <span className="text-gradient">Team</span>
+          </h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A passionate group of students, researchers, and builders dedicated to revolutionizing how you learn.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {team.map((member, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+              className="bg-card rounded-2xl p-6 border border-border shadow-soft hover:shadow-elevated transition-all duration-300 text-center"
+            >
+              <Avatar className="w-20 h-20 mx-auto mb-4 border-2 border-teal-500/20">
+                <AvatarImage src="" alt={member.name} />
+                <AvatarFallback className="bg-gradient-primary text-primary-foreground text-lg font-semibold">
+                  {member.initials}
+                </AvatarFallback>
+              </Avatar>
+              <h4 className="font-display text-lg font-semibold text-foreground mb-1">
+                {member.name}
+              </h4>
+              <p className="text-sm text-teal-500 font-medium mb-3">
+                {member.role}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {member.bio}
               </p>
             </motion.div>
           ))}
