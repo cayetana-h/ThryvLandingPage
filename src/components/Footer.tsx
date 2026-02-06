@@ -1,5 +1,3 @@
-import { Brain } from "lucide-react";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -8,14 +6,13 @@ export function Footer() {
       <div className="container-wide mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="p-2 rounded-xl bg-gradient-primary">
-              <Brain className="h-4 w-4 text-primary-foreground" />
-            </div>
-            <span className="font-display font-semibold text-lg text-foreground">
-              Thryv
-            </span>
+          <div className="flex items-center">
+            <img
+              src="/logo.png"
+              className="h-[40px] w-auto"
+            />
           </div>
+
 
           {/* Links */}
           <nav className="flex items-center gap-6">
