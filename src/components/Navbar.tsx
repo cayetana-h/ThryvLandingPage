@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Brain } from "lucide-react";
+import { Menu, X} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -36,14 +36,14 @@ export function Navbar() {
       <nav className="container-wide mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-xl bg-gradient-primary shadow-soft group-hover:shadow-elevated transition-all duration-300">
-              <Brain className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="font-display font-semibold text-xl text-foreground">
-              Thryv
-            </span>
+          <a href="#" className="flex items-center group">
+            <img
+              src="/logo.png"
+              alt="Thryv"
+              className="h-[65px] w-auto"
+            />
           </a>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

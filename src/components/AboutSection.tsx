@@ -15,40 +15,40 @@ const values = [
     icon: Lightbulb,
     title: "Science Over Hype",
     description:
-      "No empty promises. We only build features backed by peer-reviewed cognitive science research.",
+      "No empty promises. We only build features backed by cognitive science research.",
   },
   {
     icon: Users,
     title: "Built By Students",
     description:
-      "Our team includes students and recent graduates who've experienced these struggles firsthand.",
+      "Our team includes fours Computer Science & AI students.",
   },
 ];
 
 const team = [
   {
-    name: "Alex Chen",
-    role: "Co-Founder & CEO",
-    bio: "Neuroscience PhD dropout turned entrepreneur. Passionate about making cognitive science accessible.",
-    initials: "AC",
+    name: "Jinin Aljayyousi",
+    role: "Role",
+    bio: "Bio",
+    initials: "JA",
   },
   {
-    name: "Jordan Rivera",
-    role: "Co-Founder & CTO",
-    bio: "Former Google engineer. Believes technology should work with our brains, not against them.",
-    initials: "JR",
+    name: "Cayetana Hinostroza",
+    role: "Role",
+    bio: "Bio",
+    initials: "CH",
   },
   {
-    name: "Sam Mitchell",
-    role: "Head of Product",
-    bio: "UX designer and psychology enthusiast. Obsessed with creating delightful learning experiences.",
-    initials: "SM",
+    name: "Gabriela Vega",
+    role: "Role",
+    bio: "Bio",
+    initials: "GV",
   },
   {
-    name: "Taylor Park",
-    role: "Lead Developer",
-    bio: "Full-stack developer and former competitive chess player. Loves building things that challenge the mind.",
-    initials: "TP",
+    name: "Alejandro Serrano",
+    role: "Role",
+    bio: "Bio",
+    initials: "AS",
   },
 ];
 

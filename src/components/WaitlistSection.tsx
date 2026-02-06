@@ -39,7 +39,7 @@ export function WaitlistSection() {
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Be the First to{" "}
-            <span className="text-gradient">Experience MindPulse</span>
+            <span className="text-gradient">Experience Thryv</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10">
             Join our waitlist to get early access when we launch. 
@@ -60,7 +60,7 @@ export function WaitlistSection() {
                 You're on the list!
               </h3>
               <p className="text-muted-foreground">
-                We'll notify you as soon as MindPulse is ready.
+                We'll notify you as soon as Thryv is ready.
               </p>
             </motion.div>
           ) : (
