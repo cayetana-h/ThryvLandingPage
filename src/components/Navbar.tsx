@@ -41,7 +41,7 @@ export function Navbar() {
               <Brain className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="font-display font-semibold text-xl text-foreground">
-              MindPulse
+              Thryv
             </span>
           </a>
 

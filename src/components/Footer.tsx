@@ -13,7 +13,7 @@ export function Footer() {
               <Brain className="h-4 w-4 text-primary-foreground" />
             </div>
             <span className="font-display font-semibold text-lg text-foreground">
-              MindPulse
+              Thryv
             </span>
           </div>
 
