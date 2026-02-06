@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
-  { href: "#benefits", label: "Benefits" },
-  { href: "#science", label: "Science" },
-  { href: "#about", label: "About" },
+  { href: "/benefits", label: "Benefits" },
+  { href: "/science", label: "Science" },
+  { href: "/about", label: "About" },
 ];
 
 export function Navbar() {
