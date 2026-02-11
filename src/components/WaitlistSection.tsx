@@ -11,17 +11,44 @@ export function WaitlistSection() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
-    
+
+    const cleanEmail = email.trim().toLowerCase();
+    if (!cleanEmail) return;
+
     setStatus("loading");
-    
-    // Simulate API call
-    setTimeout(() => {
+
+    try {
+      const WAITLIST_URL = import.meta.env.VITE_WAITLIST_URL as string;
+      if (!WAITLIST_URL) throw new Error("Missing VITE_WAITLIST_URL");
+
+      // Use a "simple" request (no JSON) to avoid CORS preflight on Apps Script
+      const body = new URLSearchParams({ email: cleanEmail });
+
+      const res = await fetch(WAITLIST_URL, {
+        method: "POST",
+        body,
+      });
+
+      if (!res.ok) throw new Error("Request failed");
+
+      // Apps Script sometimes returns text; try json, fallback to text
+      const text = await res.text();
+      try {
+        const data = JSON.parse(text);
+        if (data && data.ok === false) throw new Error(data.error || "Save failed");
+      } catch {
+        // if it's not JSON, we still treat ok response as success
+      }
+
       setStatus("success");
       setEmail("");
-    }, 1500);
+    } catch (err) {
+      console.error(err);
+      setStatus("idle");
+      alert("Couldn’t save your email. Please try again.");
+    }
   };
 
   return (
@@ -42,8 +69,8 @@ export function WaitlistSection() {
             <span className="text-gradient">Experience Thryv</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10">
-            Join our waitlist to get early access when we launch. 
-            Be part of the journey to smarter studying.
+            Join our waitlist to get early access when we launch. Be part of the
+            journey to smarter studying.
           </p>
 
           {/* Form */}
