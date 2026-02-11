@@ -64,7 +64,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <Button variant="hero" size="sm" className="hidden sm:inline-flex" asChild>
-              <a href="#waitlist">Join Waitlist</a>
+              <Link to="/#waitlist">Join Waitlist</Link>
             </Button>
             
             {/* Mobile Menu Toggle */}
@@ -100,9 +100,9 @@ export function Navbar() {
                   </a>
                 ))}
                 <Button variant="hero" className="w-full" asChild>
-                  <a href="#waitlist" onClick={() => setIsOpen(false)}>
+                  <Link to="#waitlist" onClick={() => setIsOpen(false)}>
                     Join Waitlist
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </motion.div>
