@@ -20,7 +20,10 @@ export function WaitlistSection() {
     setStatus("loading");
 
     try {
-      const WAITLIST_URL = import.meta.env.VITE_WAITLIST_URL as string;
+      const WAITLIST_URL =
+      (import.meta.env.VITE_WAITLIST_URL as string) ||
+      "https://script.google.com/macros/s/AKfycbznzQwCFZkxY2E7ClpCM8FYQ4Rv1yEzw2MS9FwEZBIHCADMegqxR4x8Xy5uU-6-llDj/exec";
+
       if (!WAITLIST_URL) throw new Error("Missing VITE_WAITLIST_URL");
 
       // Use a "simple" request (no JSON) to avoid CORS preflight on Apps Script
