@@ -8,25 +8,25 @@ const principles = [
     icon: Brain,
     title: "Neuroplasticity",
     description:
-      "Your brain physically changes with practice. Our games are designed to stimulate neural pathways responsible for attention and memory, strengthening them over time.",
+      "Repeated practice strengthens neural circuits involved in attention and executive control. Cognitive tasks like Go/No-Go are widely used in research to train inhibitory control and sustained focus.",
   },
   {
     icon: Activity,
-    title: "Spaced Cognitive Training",
+    title: "Brief, Repeated Sessions",
     description:
-      "Short, frequent training sessions are more effective than long ones. We use evidence-based intervals that optimize learning and retention.",
+      "Research shows that shorter, consistent training sessions support better learning consolidation than infrequent long sessions. Regular engagement reinforces attentional control over time.",
   },
   {
     icon: Layers,
-    title: "Multi-Domain Targeting",
+    title: "Executive Function Training",
     description:
-      "Each game targets specific cognitive functions — working memory, inhibitory control, cognitive flexibility — for comprehensive brain training.",
+      "Tasks targeting inhibitory control, working memory, and cognitive flexibility are associated with improved self-regulation and focus in both lab and applied settings.",
   },
   {
     icon: LineChart,
-    title: "Adaptive Difficulty",
+    title: "Adaptive Challenge",
     description:
-      "Games automatically adjust to your performance, keeping you in the optimal challenge zone where real cognitive growth happens.",
+      "Performance-based difficulty adjustment maintains optimal cognitive load — a key factor in sustaining engagement and promoting measurable improvements in reaction time and accuracy.",
   },
 ];
 
