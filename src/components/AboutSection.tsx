@@ -9,45 +9,45 @@ const values = [
     icon: Heart,
     title: "Student-First Design",
     description:
-      "We understand the pressures you face. Every feature is designed with your real challenges in mind.",
+      "Every feature is crafted with students in mind. We prioritize simplicity, speed, and real-world impact over flashy gimmicks.",
   },
   {
     icon: Lightbulb,
     title: "Science Over Hype",
     description:
-      "No empty promises. We only build features backed by cognitive science research.",
+      "No empty promises. Our tools are grounded in proven neuroscience principles, not just trendy buzzwords.",
   },
   {
     icon: Users,
     title: "Built By Students",
     description:
-      "Our team includes fours Computer Science & AI students.",
+      "Our team includes four Computer Science & AI students. We know what it's like to juggle coursework, exams, and the struggle to stay focused.",
   },
 ];
 
 const team = [
   {
     name: "Jinin Aljayyousi",
-    role: "Role",
-    bio: "Bio",
+    role: "CEO – Vision & Strategy",
+    bio: "BCSAI 2nd year",
     initials: "JA",
   },
   {
     name: "Cayetana Hinostroza",
-    role: "Role",
-    bio: "Bio",
+    role: "CTO – Engineering & Architecture",
+    bio: "BCSAI 3rd year",
     initials: "CH",
   },
   {
     name: "Gabriela Vega",
-    role: "Role",
-    bio: "Bio",
+    role: "CPO - Product & Cognitive Design",
+    bio: "BCSAI 3rd year",
     initials: "GV",
   },
   {
     name: "Alejandro Serrano",
-    role: "Role",
-    bio: "Bio",
+    role: "COO & Cloud Infrastructure Lead - Data, retention, optimization",
+    bio: "BCSAI 2nd year",
     initials: "AS",
   },
 ];
@@ -83,16 +83,15 @@ export function AboutSection() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            We started Thryv after watching too many friends burn out from
-            ineffective study habits. Endless hours in the library, only to feel
-            like nothing stuck. Breaks that turned into hour-long doom-scrolling
-            sessions. The frustration of knowing you're capable of more.
+            We started Thryv becuase as students ourselves, we were tired of feeling 
+            overwhelmed, distracted, and burnt out. We want to change the way we use phones
+            and technology in general. Instead of being a source of distraction, we want it 
+            to be a tool for focus, learning, and growth.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We knew there had to be a better way. By combining cutting-edge
-            neuroscience with thoughtful design, we're creating tools that work
-            with your brain, not against it. Quick, effective, and actually
-            enjoyable to use.
+            Our vision is to create a world where technology helps us thrive, not just survive. 
+            A world where students can harness the power of their devices to unlock their full potential.
+            Make technology our ally instead of our enemy. 
           </p>
         </motion.div>
 
@@ -130,7 +129,7 @@ export function AboutSection() {
             Meet the <span className="text-gradient">Team</span>
           </h3>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A passionate group of students, researchers, and builders dedicated to revolutionizing how you learn.
+            A passionate group of students who are dedicated to making a real difference in the lives of their peers.
           </p>
         </motion.div>
 

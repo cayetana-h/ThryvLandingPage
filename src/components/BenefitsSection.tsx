@@ -18,9 +18,9 @@ const benefits = [
   },
   {
     icon: RefreshCw,
-    title: "Working Memory Boost",
+    title: "Group Study Sessions",
     description:
-      "Strengthen your ability to hold and manipulate information, crucial for problem-solving and learning.",
+      "Boost motivation and retention by creating group sessions to stick to effective time management.",
   },
   {
     icon: Shield,
@@ -64,7 +64,7 @@ export function BenefitsSection() {
             <span className="text-gradient">Study Life</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Cognitive training isn't just about games — it's about building
+            It isn't just about playing a game — it's about building
             mental habits that make everything you do more effective.
           </p>
         </motion.div>
